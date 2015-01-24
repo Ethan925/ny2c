@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Pizza(models.Model):
-    NEW_YORK = 'NY'
+    NEW_YORK = 'New York'
     CHICAGO = 'CH'
     BRAVO = 'BR'
     SICILIAN = 'SC'
@@ -12,6 +12,6 @@ class Pizza(models.Model):
         (BRAVO, 'Bravo'),
         (SICILIAN, 'Sicilian'),
     )
-    crust = models.CharField(max_length=2,
+    crust = models.CharField(max_length=8,
                                       choices=CRUST_CHOICES,
                                       default=NEW_YORK)

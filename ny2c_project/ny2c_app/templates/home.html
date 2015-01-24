@@ -1,1 +1,6 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'custom.css' %}">
 <h1>asdf</h1>
+{% for pizza in pizzas %}
+{{pizza.crust}}
+{% endfor %}
