@@ -12,6 +12,18 @@ class Pizza(models.Model):
         (BRAVO, 'Bravo'),
         (SICILIAN, 'Sicilian'),
     )
+
+    Pepperoni = 'Pepperoni'
+    Sausage = 'Sausage'
+    Onion = 'Onion'
+    TOPPING_CHOICES = (
+        (Pepperoni, 'Pepperoni'),
+        (Sausage, 'Sausage'),
+        (Onion, 'Onion'),
+    )
+    toppings = models.CharField(max_length=500,
+                                      choices=TOPPING_CHOICES,
+                                      default=Pepperoni)
     crust = models.CharField(max_length=8,
                                       choices=CRUST_CHOICES,
                                       default=NEW_YORK)
