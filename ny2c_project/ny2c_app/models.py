@@ -3,8 +3,10 @@ from django.db import models
 # Create your models here.
 
 class Order(models.Model):
-    table = models.CharField(max_length=50)
+
+    table = models.CharField(max_length=50, default='counter')
     order_time = models.DateTimeField(auto_now_add=True)
+
     def __unicode__(self):
         return "%s." %(str(self.order_time))
 
@@ -29,6 +31,8 @@ class Pizza(models.Model):
         (Sausage, 'Sausage'),
         (Onion, 'Onion'),
     )
+
+    order = models.ForeignKey(Order)
 
     toppings = models.CharField(max_length=500,
                                       choices=TOPPING_CHOICES,
