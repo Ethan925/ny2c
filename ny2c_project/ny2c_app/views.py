@@ -8,4 +8,3 @@ def home(request):
 	context = {"pizzas":pizzas}
 	context = {"orders":orders}
 	return render_to_response("home.html", locals(), context_instance=RequestContext(request))
-# Create your views here.

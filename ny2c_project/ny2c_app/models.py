@@ -42,4 +42,4 @@ class Pizza(models.Model):
                                       default=NEW_YORK)
 
     def __unicode__(self):
-        return "Make a %s with %s.asdf" %(self.crust, str(self.toppings))
+        return "Make a %s with %s." %(self.crust, str(self.toppings))
