@@ -1,5 +1,5 @@
 from django.contrib import admin
-from ny2c_app.models import Pizza, Order
+from ny2c_app.models import *
 
 admin.site.register(Order)
 admin.site.register(Pizza)
